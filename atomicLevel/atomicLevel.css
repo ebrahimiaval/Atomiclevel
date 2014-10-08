@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+.atomicLevel-topic{
+    display: block;
+    height:22px;
+    overflow:hidden;
+    padding:0px;
+    padding-top:32px;
+    padding-right: 20px;
+    float:left;
+}
+
+.atomicLevel-wrap{
+    height:54px;
+    float:left;
+    position:relative;
+}
+
+.atomicLevel-pointLine{
+    width:500px;
+    margin-top:41px;
+    position:absolute;
+    z-index:1000;
+}
+
+.atomicLevel-pointSelector{
+    position:absolute;
+    z-index:1020;
+    cursor:pointer;
+}
+
+.atomicLevel-pointPart{
+    height:100%;
+    float:left;
+    position:relative;
+    z-index:1010;
+}
+.atomicLevel-pointText{
+    width:100%;
+    overflow:hidden;
+    float:left;	
+}
+.atomicLevel-pointPIC{
+    position: absolute;
+    z-index:100;
+    margin-top:26px;
+    width:100%;
+    cursor:pointer;	
+}

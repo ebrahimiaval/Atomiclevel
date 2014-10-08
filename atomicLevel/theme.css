@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+.atomicLevel-topic{
+    text-align:right;
+    font-size:12px;
+    font-family:Tahoma;
+    color:#666;
+}
+
+.atomicLevel-wrap{
+    font-size:12px;
+    font-family:Tahoma;
+    color:#888;
+}
+
+.atomicLevel-pointLine{
+    height:1px;
+    background:#999;
+}
+
+.atomicLevel-pointSelector{
+    height:30px;
+    background-image:url(imgs/points.png);
+    background-position: center 0px;
+    background-repeat: no-repeat;
+    margin-top:26px;
+}
+
+.atomicLevel-pointText{
+    padding:6px 0px;
+    text-align:center;
+}
+.atomicLevel-pointPIC{
+    margin-top:26px;
+    height:30px;
+    background-image:url(imgs/points.png);
+    background-position: center -60px  ;
+    background-repeat: no-repeat;	
+}
+
+.atomicLevel-activePointTXT{
+    color:#F97720;
+}

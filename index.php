@@ -33,7 +33,6 @@ $(document).ready(function(e) {
     
 </head>
 <body>
-<span id="atomicLevel-topic"></span><div id="atomicLevel-wrap"><div id="atomicLevel-pointSelector"></div><div id="atomicLevel-pointLine"></div></div>
 
 <div id="container">
 <!--  

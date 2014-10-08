@@ -7,8 +7,8 @@
     <script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="scripts/jquery-ui-1.11.1.full.min.js"></script>  
 
-    <link rel="stylesheet" type="text/css" href="Atomiclevel/style.css"/>
-    <script type="text/javascript" src="Atomiclevel/atomicLevel.js"></script> 
+    <link rel="stylesheet" type="text/css" href="dist/style.css"/>
+    <script type="text/javascript" src="dist/atomicLevel.js"></script> 
 
 
 <script>

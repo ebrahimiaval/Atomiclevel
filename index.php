@@ -18,11 +18,11 @@ $(document).ready(function(e) {
 	
 	var startPoint = <?php if (@$_GET["startPoint"])echo $_GET["startPoint"]; else echo 1; ?>;
 	
-	$('#atomicLevel-wrap').sinoserAtomicLevel({
+	$('#container').atomicLevel({
+            topic: "مبلغ قابل سرمایه گذاری / میلیون تومان",
             params:array,
-            width:700,
+            width:400,
             start:startPoint,
-            width:300,
             /*,redirect:false*/
         },
         'easeOutBounce'
@@ -33,16 +33,16 @@ $(document).ready(function(e) {
     
 </head>
 <body>
-
+<span id="atomicLevel-topic"></span><div id="atomicLevel-wrap"><div id="atomicLevel-pointSelector"></div><div id="atomicLevel-pointLine"></div></div>
 
 <div id="container">
-    
-    <div id="atomicLevel-topic">قیمت / میلیون تومان</div> 
-	<div id="atomicLevel-wrap">
-            <div id="atomicLevel-pointSelector"></div>
-            <div id="atomicLevel-pointLine"></div>
+<!--  
+    <div class="atomicLevel-topic">قیمت / میلیون تومان</div> 
+	<div class="atomicLevel-wrap">
+            <div class="atomicLevel-pointSelector"></div>
+            <div class="atomicLevel-pointLine"></div>
     </div>
-    
+ -->
 </div>
 
 

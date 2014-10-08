@@ -1,14 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-body{
-	margin:0px;
-	padding:0px;
-	padding:100px;
-}
-
-
-/*******************************/
 .atomicLevel-topic{
     display: block;
     height:22px;
@@ -32,9 +24,6 @@ body{
 	position:relative;
 	color:#888;
 }
-
-
-/*************************/
 
 .atomicLevel-pointPart{
     height:100%;
@@ -68,7 +57,6 @@ body{
 	color:#F97720;
 }
 
-/*********************/
 .atomicLevel-pointLine{
 	height:1px;
 	width:500px;

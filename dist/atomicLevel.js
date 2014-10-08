@@ -5,7 +5,7 @@
             width: 500,
             start: 1,
             params: null,
-            redirect: true
+            redirect: false,
         }, option || {});
 
         if(option.params == null){

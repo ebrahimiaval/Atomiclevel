@@ -7,23 +7,22 @@
     <script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="scripts/jquery-ui-1.11.1.full.min.js"></script>  
 
-    <link rel="stylesheet" type="text/css" href="dist/style.css"/>
-    <script type="text/javascript" src="dist/atomicLevel.js"></script> 
-
-
+    <link rel="stylesheet" type="text/css" href="atomicLevel/atomicLevel.css"/>
+    <script type="text/javascript" src="atomicLevel/atomicLevel.js"></script> 
+    
 <script>
 $(document).ready(function(e) {
 
-	var array = [['0.5','کمتر از 0.5'],['1.2','حدود 1.2'],['1.8','حدود 1.8'],['2','بیش از 2.0']];
+	var array = [['20','Around 20$'],['50','Around 50$'],['100','Around 100$'],['150+','Over 150$']];
 	
 	var startPoint = <?php if (@$_GET["startPoint"])echo $_GET["startPoint"]; else echo 1; ?>;
 	
 	$('#container').atomicLevel({
-            topic: "مبلغ قابل سرمایه گذاری / میلیون تومان",
+            topic: "price",//
             params:array,
             width:400,
             start:startPoint,
-            /*,redirect:false*/
+            redirect:true
         },
         'easeOutBounce'
         /*,function(){alert('changed!')}*/);
@@ -32,7 +31,7 @@ $(document).ready(function(e) {
 </script> 
     
 </head>
-<body>
+<body style="margin:0px;padding:100px;">
 
 <div id="container">
 <!--  

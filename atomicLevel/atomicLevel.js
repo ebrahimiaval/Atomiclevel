@@ -1,3 +1,10 @@
+/*
+*   About : atomicLevel v2.0.0 -  scripts
+*   Theme name : Flat
+*   Created and published by : Mr.sinoser [mohammad ebrahimi aval]
+*   publisher site :http://sinoser.ir
+*   publisher blog :http://sinoser.ir/blog
+*/
 (function($){
     $.fn.atomicLevel = function(option,ease,callback){
         option = $.extend({
@@ -14,7 +21,10 @@
             return;
         }
             //check and set ease and callback arguments
-            if(!$.isFunction(callback)){
+            if($.isFunction(ease)){
+                callback = ease;
+                ease = 'linear';
+            }else if(!$.isFunction(callback)){
                 if($.type(ease) == 'string'){
                     callback = function(){};  
                 }else{
@@ -22,18 +32,16 @@
                     callback = function(){};//fix bog
                     ease = "linear";
                 }   
-            }else if($.isFunction(ease)){
-                callback = ease;
-                ease = 'linear';
             }
             
             //add base frame
             $(this)
                 .html('<span class="atomicLevel-topic">'+option.topic+'</span><div class="atomicLevel-wrap"><div class="atomicLevel-pointSelector"></div><div class="atomicLevel-pointLine"></div></div>');
             
-            
+            var senseStringValue = false;
             $.each(option.params,function(index,value){
                 if($.type(value) == "string"){
+                    senseStringValue = true;
                     $('.atomicLevel-pointSelector')
                             .before('<div class="atomicLevel-pointPart" data-value="undefined" ><div class="atomicLevel-pointText">'+value+'</div><div class="atomicLevel-pointPIC"></div></div>');
                 }else{
@@ -95,15 +103,25 @@
 		$('.atomicLevel-pointText').removeClass('atomicLevel-activePointTXT').eq(level).addClass('atomicLevel-activePointTXT');
 		$('.atomicLevel-pointSelector').animate({left:level*setWidth},setWidth*2,ease,function(){
 			
-                        callback(level+1,option.params[level]);
+                        console.log( callback());
+                        if(senseStringValue)
+                            callback(level+1,option.params[level]);
+                        else
+                            callback(level+1,option.params[level][1]);
                         
-                        if(option.redirect && $.type(option.params[level]) != "string"){
+                        if(option.redirect){
+                            if(senseStringValue){
+                                console.log("your params option is invalid");
+                                return false;
+                            }
+                            
                             urlPart = document.URL.split('?');
                             if($.type(urlPart[1]) != 'undefined' && urlPart[1] != ''){//if have other get data
                                 wl = urlPart[1].split('&');
                                 var startPointSens = false;
                                 var pointDataSens = false;
-
+                                var pointTitleSens = false;
+                                
                                 $.each(wl,function(i,v){
                                         wl[i] = v.split('=');
                                         if(wl[i][0] == 'startPoint'){
@@ -113,8 +131,8 @@
                                                 wl[i][1] = $('.atomicLevel-pointPart').eq(level).attr('data-value');
                                                 pointDataSens = true;
                                         }else if(wl[i][0] == 'pointTitle'){
-                                                wl[i][1] = option.params[level];
-                                                pointDataSens = true;
+                                                wl[i][1] = option.params[level][0];
+                                                pointTitleSens = true;
                                         }
                                 });
 
@@ -126,16 +144,18 @@
                                 }
                                 
                                 if(!startPointSens)
-                                        URL = URL + '&startPoint='+(level+1) ;
+                                        URL = URL + '&startPoint='+(level+1);
                                     
                                 if(!pointDataSens)
-                                        URL = URL + '&pointData='+
-                                            $('.atomicLevel-pointPart').eq(level).attr('data-value') + '&pointTitle=' + option.params[level];
+                                        URL = URL + '&pointData='+$('.atomicLevel-pointPart').eq(level).attr('data-value');
+                                    
+                                if(!pointTitleSens)
+                                        URL = URL + '&pointTitle=' + option.params[level][0];
 
                                 URL = urlPart[0]+'?'+URL;
                                 document.location = URL;
                             }else{//if url is clean
-                                document.location = document.location +'?'+ 'startPoint=' + (level+1) + '&pointData=' + $('.atomicLevel-pointPart').eq(level).attr('data-value')+ '&pointTitle=' + option.params[level] ;
+                                document.location = document.location +'?'+ 'startPoint=' + (level+1) + '&pointData=' + $('.atomicLevel-pointPart').eq(level).attr('data-value')+ '&pointTitle=' + option.params[level][0] ;
                             }
                         }
                     });

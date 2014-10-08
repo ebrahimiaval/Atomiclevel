@@ -17,11 +17,14 @@ $(document).ready(function(e) {
     
 	$('#container').atomicLevel(
             {
-                params:myParams,
+                params:['stage1','stage 2','stage 3','stage 4','stage 5']],
                 width:400,
-                start:<?php if (@$_GET["startPoint"])echo $_GET["startPoint"]; else echo 1; ?>,
-                redirect : true,
+                start:2,
                 dir:"ltr"
+            },
+            function(index,value){
+                $("#pointIndex").text(index);
+                $("#pointTitle").text(value);
             }
         );
 });
@@ -31,7 +34,14 @@ $(document).ready(function(e) {
 <body>
 
     <h1>example 3 : atomicLevel plugin of Mr.sinoser</h1> 
-        <h4>you are in point '<span id="pointIndex">4</span>' with '<span id="pointValue">level 4</span>' title. this text are changing when you change level</h4>
+        <h4>
+            you are in point '
+            <span id="pointIndex">2</span>
+            'with '
+            <span id="pointTitle">stage2</span>
+            'title. this text are changing when you change level
+        </h4>
+    
         <span> note : you can use neither drag and drop and click on levels to change state</span>
         <br><br>
         
@@ -42,10 +52,9 @@ $(document).ready(function(e) {
         <dl>
             <dt>$('#container').atomicLevel(</dt>
             <dt>{</dt>
-                <dd>params : ['1 stage','2 stage','3 stage','4 stage',['5 stage','ended']],</dd>
+                <dd>params : ['1 stage','2 stage','3 stage','4 stage','5 stage'],</dd>
                 <dd>width : 400,</dd>
-                <dd>start : &lt;?php if (@$_GET["startPoint"])echo $_GET["startPoint"]; else echo 1; ?&gt;,</dd>
-                <dd>redirect : true,</dd>
+                <dd>start : 2,</dd>
                 <dd>dir : "ltr",</dd>
             <dt>});</dl>
         </dl>

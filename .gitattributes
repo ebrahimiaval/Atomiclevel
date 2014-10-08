@@ -1,0 +1,9 @@
+# Standard to msysgit
+*.css	 diff=astextplain
+*.js	 diff=astextplain
+*.html diff=astextplain
+*.html diff=astextplain
+*.ttf  diff=astextplain
+*.svg  diff=astextplain
+*.eot  diff=astextplain
+*.woff	 diff=astextplain

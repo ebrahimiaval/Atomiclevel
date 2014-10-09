@@ -5,12 +5,12 @@
 <title>example 3 of atomicLevel plugin of Mr.sinoser</title>
  <style>body{padding:30px;}dt{color: chocolate;}dd{color: royalblue;}h4>span{color: red}</style>
  
-    <script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery-ui-1.11.1.full.min.js"></script>  
+    <script type="text/javascript" src="../scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-ui-1.11.1.full.min.js"></script>  
 
-    <link rel="stylesheet" type="text/css" href="atomicLevel/atomicLevel.css"/>
-    <link rel="stylesheet" type="text/css" href="atomicLevel/theme.css"/>
-    <script type="text/javascript" src="atomicLevel/atomicLevel.js"></script> 
+    <link rel="stylesheet" type="text/css" href="../atomicLevel/atomicLevel.css"/>
+    <link rel="stylesheet" type="text/css" href="../atomicLevel/theme.css"/>
+    <script type="text/javascript" src="../atomicLevel/atomicLevel.js"></script> 
     
 <script>
 $(document).ready(function(e) {

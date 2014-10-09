@@ -60,7 +60,7 @@ callback : A function that runs after the change in the selected.
 ## examples 1
 you can see live this example in 'example/example1.html'.screenshot :
 
-![atomicLevel jQuery plugin -  Mr.sinoser](https://raw.githubusercontent.com/sinoser/tinyNotice/master/examples/exp1.png)
+![atomicLevel jQuery plugin -  Mr.sinoser](https://raw.githubusercontent.com/sinoser/Atomiclevel/master/examples/imgs/exp1.png)
 
 
 ```js
@@ -83,7 +83,7 @@ $('#container').atomicLevel(
 ## examples 2
 you can see live this example in 'example/example2.html'.screenshot :
 
-![atomicLevel jQuery plugin -  Mr.sinoser](https://raw.githubusercontent.com/sinoser/tinyNotice/master/examples/exp2.png)
+![atomicLevel jQuery plugin -  Mr.sinoser](https://raw.githubusercontent.com/sinoser/Atomiclevel/master/examples/imgs/exp2.png)
 
 
 ```js
@@ -103,7 +103,7 @@ $('#container').atomicLevel(
 ## examples 3
 you can see live this example in 'example/example3.html'.screenshot :
 
-![atomicLevel jQuery plugin -  Mr.sinoser](https://raw.githubusercontent.com/sinoser/tinyNotice/master/examples/exp3.png)
+![atomicLevel jQuery plugin -  Mr.sinoser](https://raw.githubusercontent.com/sinoser/Atomiclevel/master/examples/imgs/exp3.png)
 
 
 ```js

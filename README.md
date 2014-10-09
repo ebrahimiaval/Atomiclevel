@@ -27,9 +27,10 @@ note : if in project attached jQuery and jQuery UI don't need to add jQuery sour
 ## Usage
 
 ```js
-$('#container').atomicLevel({options},[easing],[callback]);
+$(containerSelector).atomicLevel({options},[easing],[callback]);
 ```
-#container : Insert location plug
+
+containerSelector : Insert location plug
 
 ---------------------------------------------------
 

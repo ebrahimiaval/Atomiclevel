@@ -13,12 +13,12 @@ Congratulations,atomicLevel is ready to use.this jQuery plugin don't need to add
 <!--theme styles-->
     <link rel="stylesheet" href="atomicLevel/theme.css">
 
-<!--jQuery source--->
+<!--jQuery source-->
     <script src="scripts/jquery-1.11.1.min.js"></script>
     <script src="scripts/jquery-ui-1.11.1.full.min.js"></script>
-<!--/jQuery source--->
+<!--/jQuery source-->
 
-<!--atomicLevel scripts->
+<!--atomicLevel scripts-->
     <script src="atomicLevel/atomicLevel.js"></script>
 ```
 note : if in project attached jQuery and jQuery UI don't need to add jQuery source files;

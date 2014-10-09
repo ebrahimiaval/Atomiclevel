@@ -30,7 +30,9 @@ note : if in project attached jQuery and jQuery UI don't need to add jQuery sour
 $('#container').atomicLevel({options},[easing],[callback]);
 ```
 #container : Insert location plug
+
 ---------------------------------------------------
+
 options: configuration options. default is:
 ```js
     topic : "",
@@ -52,9 +54,13 @@ params: array of points data.you can use 1D and 2D array. note : if redirect is 
 redirect: false,//redirect when change selected point (send data by get method into current url)
 
 dir:dirction of text
+
 ---------------------------------------------------
+
 easing : jQuery UI easing function.[try it easing](http://jqueryui.com/easing/) 
+
 ---------------------------------------------------
+
 callback : A function that runs after the change in the selected.
 
 ## examples 1
